@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+   name: tejas8320
+spec:
+   replicas: 2
+   selector:
+    matchLabels:
+     app: tejas8320
+   template:
+      metadata:
+        labels:
+          app: tejas8320
+      spec:
+       containers:
+        - name: tejas8320
+          image: tejas8320/internship-project
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
